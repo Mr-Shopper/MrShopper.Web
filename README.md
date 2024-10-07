@@ -1,6 +1,10 @@
 # MrShopper.Web
 
-MrShopper.Web ist die zugehörige Website der MrShopper-Application. Da es eine React-App ist, die mit create-react-app erstellt worden ist, sind folgende Skripte zur Interaktion mit der App verfügbar:
+MrShopper.Web ist die zugehörige Website der MrShopper-Application. Diese interagiert über die fetch-API mit der 'MrShopper.Api'.
+
+Hier ein Ausschnitt aus der UI: ![alt text](image.png)
+
+Da es eine React-App ist, die mit create-react-app erstellt worden ist, sind folgende Skripte zur Interaktion mit der App verfügbar:
 
 
 ### `npm start`
