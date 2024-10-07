@@ -1,0 +1,46 @@
+/* EinkaufsItemComponentStyle.css */
+
+.container {
+    width: 41vw;                                   /* Set the container width */
+    height: 3vh;                                   /* Set the height */
+    display: flex;                                 /* Use flexbox for alignment */
+    justify-content: space-between;                /* Space between items */
+    align-items: center;                           /* Center items vertically */
+    margin: 10px auto;                            /* Center container horizontally */
+    background-color: rgba(229, 228, 228, 0.621);  /* Background color */
+    border-radius: 10px;                           /* Rounded corners */
+    padding: 0 10px;                               /* Padding for content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Center text within the container */
+.container p {
+    margin: 0;                                    /* Remove default margins for paragraphs */
+    padding: 0;                                   /* No padding */
+    flex-grow: 1;                                 /* Allow text to grow and take up available space */
+    text-align: center;                           /* Center text */
+}
+
+/* Adjust spacing for checkbox and button */
+.checkbox-and-button {
+    display: flex;                                 /* Use flexbox for alignment */
+    align-items: center;                          /* Center items vertically */
+}
+
+.container input[type='checkbox'] {
+    margin-right: 10px;                           /* Space between checkbox and button */
+}
+
+.buttonDelete {
+    background-color: #d9534f;                    /* Bootstrap danger color */
+    color: white;                                  /* Text color */
+    border: none;                                  /* No border */
+    border-radius: 5px;                           /* Rounded corners */
+    padding: 5px 10px;                            /* Padding for button */
+    cursor: pointer;                               /* Pointer cursor on hover */
+    transition: background-color 0.3s;            /* Transition effect */
+}
+
+.buttonDelete:hover {
+    background-color: #c9302c;                    /* Darker shade on hover */
+}

@@ -1,0 +1,40 @@
+/* ImpressumPage.css */
+
+.impressum-container {
+    width: 80%;                                
+    max-width: 800px;                            
+    margin: 20px auto;                          
+    padding: 20px;       
+    background-color: rgba(203, 202, 202, 0.2);             
+    border-radius: 10px;                  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.impressum-title {
+    text-align: center;                       
+    margin-bottom: 20px;                         
+}
+
+.impressum-section-header {
+    font-weight: bold;                           
+    margin-top: 20px;                        
+}
+
+.impressum-address,
+.impressum-representative,
+.impressum-contact-info,
+.impressum-uid-info,
+.impressum-disclaimer,
+.impressum-copyright {
+    line-height: 1.6;             
+    margin-bottom: 15px;                
+}
+
+.impressum-email {
+    color: #007BFF;                  
+    text-decoration: none;               
+}
+
+.impressum-email:hover {
+    text-decoration: underline;              
+}
