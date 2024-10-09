@@ -2,11 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/NavbarStyle.css';
 
+
 const NavBar: React.FC = () => {
+   
+    const mrShopperLogo = require('../../../src/logo.jpg');
+    
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <Link to="/" className="navbar-logo">Mr. Shopper</Link>
+                <div className='navbar-logo'>
+                    <img src={mrShopperLogo} alt='Logo'/>
+                    <Link to="/" className='navbar-logo-title'>Mr. Shopper</Link>
+                </div>
                 <ul className="navbar-menu">
                     <li className="navbar-item">
                         <Link to="/" className="navbar-link">Home</Link>

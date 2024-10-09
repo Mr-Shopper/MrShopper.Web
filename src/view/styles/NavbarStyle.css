@@ -1,50 +1,62 @@
 /* NavBarStyle.css */
 
 .navbar {
-    width: 100%;    
-    height: 60px;                      
-    background-color: #2835a7;   
-    display: flex;      
-    align-items: center;     
-    justify-content: center;                  
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);    
+    width: 100%;
+    height: 60px;
+    background-color: #2835a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
-    display: flex;                            
-    justify-content: space-between;              
-    align-items: center;                           
-    width: 80%;                             
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
 }
 
 .navbar-logo {
-    font-size: 24px;                            
-    color: white;                                
-    text-decoration: none;         
+    display: flex;
+    align-items: center;  /* Vertically align the image and text */
+    justify-content: flex-start;  /* Align logo and text to the left */
+    flex-grow: 1; 
 }
 
-.navbar-logo:hover {
+.navbar-logo img {
+    height: 40px;  /* Adjust the image height to fit the navbar */
+    width: auto;
+    margin-right: 10px;  /* Add some space between the image and the text */
+}
+
+.navbar-logo-title {
+    font-size: 24px;                            
+    color: white;                                
+    text-decoration: none;  
+}
+
+.navbar-logo-title:hover {
     font-weight: bold;
-    text-decoration: none;
 }
 
 .navbar-menu {
-    list-style: none;                          
-    display: flex;                           
-    justify-content: center;                      
-    align-items: center;                     
-    margin: 0;                                   
-    padding: 0;                             
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;  /* Align the menu items to the right */
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-item {
-    margin: 0 20px;                             
+    margin: 0 20px;
 }
 
 .navbar-link {
-    text-decoration: none;            
-    color: white;          
-    font-size: 18px;                     
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
 .navbar-link:hover {
