@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/EinkaufsItemComponentStyle.css';
 import EinkaufsItem from '../../model/EinkaufsItem.ts';
-import { deleteEinkaufsItemById, updateEinkaufsItem } from '../../controller/ApiLibrary.ts';
+import { deleteEinkaufsItemById, updateEinkaufsItem } from '../../controller/EinkaufsItemMethods.ts';
 
 type EinkaufsItemProps = {
     einkaufsItem: EinkaufsItem;

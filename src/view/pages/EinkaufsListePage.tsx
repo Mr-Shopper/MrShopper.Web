@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import EinkaufsItemComponent from '../components/EinkaufsItemComponent.tsx';
 import EinkaufsItem from '../../model/EinkaufsItem.ts';
-import { createEinkaufsItem, deleteEinkaufsItemById } from '../../controller/ApiLibrary.ts';
+import { createEinkaufsItem, deleteEinkaufsItemById } from '../../controller/EinkaufsItemMethods.ts';
 
 import '../styles/EinkaufsListePageStyle.css'
 import NavBar from '../components/Navbar.tsx';
