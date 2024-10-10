@@ -1,0 +1,5 @@
+.einkaufslisten-container {
+    display: block; /* Block statt Flexbox für vollständige Linksbündigkeit */
+    width: 100%;
+    padding: 10px;
+  }
