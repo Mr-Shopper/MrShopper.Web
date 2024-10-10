@@ -5,7 +5,7 @@ import { deleteEinkaufsItemById, updateEinkaufsItem } from '../../controller/Ein
 
 type EinkaufsItemProps = {
     einkaufsItem: EinkaufsItem;
-    onDelete: (id: number | null) => void; // Update onDelete to accept an ID
+    onDelete: (id: number | null) => void; 
 }
 
 const EinkaufsItemComponent = (props: EinkaufsItemProps) => {
@@ -25,8 +25,8 @@ const EinkaufsItemComponent = (props: EinkaufsItemProps) => {
   
   return (
     <div className='container'>
-      <p>[{props.einkaufsItem.id}] {props.einkaufsItem.bezeichnung}</p> {/* Centering the text */}
-      <div className="checkbox-and-button"> {/* Wrapper for checkbox and button */}
+      <p>[{props.einkaufsItem.id}] {props.einkaufsItem.bezeichnung}</p>
+      <div className="checkbox-and-button"> 
         <input type='checkbox' checked={isCheckboxChecked} onChange={handleCheckboxChange} />
         <button className='buttonDelete' onClick={handleButtonDeleteClicked}>DEL</button>
       </div>

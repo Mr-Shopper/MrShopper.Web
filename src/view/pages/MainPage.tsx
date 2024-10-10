@@ -4,11 +4,14 @@ import EinkaufsItem from '../../model/EinkaufsItem.ts';
 import { createEinkaufsItem, deleteEinkaufsItemById } from '../../controller/EinkaufsItemMethods.ts';
 
 import '../styles/EinkaufsListePageStyle.css'
-import NavBar from '../components/Navbar.tsx';
+import EinkaufsListe from '../../model/EinkaufsListe.ts';
+import EinkaufsListenComponent from '../components/EinkaufsListenComponent.tsx';
 
 const EinkaufsListePage = () => {
     
     const [newEinkaufsItem, setNewEinkaufsItem] = useState<string>("")
+
+    const [einkaufsListen, setEinkaufsListen] = useState<EinkaufsListe[]>([]);
     const [einkaufsItems, setEinkaufsItems] = useState<EinkaufsItem[]>([]);
     
     useEffect(() => {
@@ -19,6 +22,11 @@ const EinkaufsListePage = () => {
         fetch("http://localhost:8080/api/einkaufsitems")
         .then(response => response.json())
         .then(data => setEinkaufsItems(data))
+        .catch(error => console.error("Fehler beim Abrufen von Daten im UseEffect:", error))
+
+        fetch("http://localhost:8080/api/einkaufslisten")
+        .then(response => response.json())
+        .then(data => setEinkaufsListen(data))
         .catch(error => console.error("Fehler beim Abrufen von Daten im UseEffect:", error))
     }
 
@@ -34,9 +42,12 @@ const EinkaufsListePage = () => {
     const handleButtonHinzufuegenClicked = () => {
         try {
             const einkaufsItem: EinkaufsItem = {
-            id: null,
-            bezeichnung: newEinkaufsItem,
-            aktiv: true,
+                id: null,
+                einkaufsListeId: null,
+                bezeichnung: newEinkaufsItem,
+                menge: 1,
+                mengenEinheit: "g",
+                aktiv: true,
             }
         
             createEinkaufsItem("http://localhost:8080/api/einkaufsitems", einkaufsItem)
@@ -68,10 +79,13 @@ const EinkaufsListePage = () => {
 
     return (
         <>
+            <EinkaufsListenComponent einkaufsListen={einkaufsListen}/>
+
             <div className='containerHinzufuegen'>
                 <input className='textboxHinzufuegen' type='text' value={newEinkaufsItem} onChange={handleTextboxHinzufuegenChange}/> 
                 <button className='buttonHinzufuegen' onClick={handleButtonHinzufuegenClicked}>Hinzufügen</button>
             </div>
+
             {einkaufsItems.length > 0 ? (
                     einkaufsItems
                     .sort((a, b) => (a.id ?? 0) - (b.id ?? 0)) 
